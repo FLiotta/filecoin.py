@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import List, Optional
 from dataclasses import dataclass
 from enum import Enum
 
@@ -40,3 +40,15 @@ class SignedMessageCID:
   Message: Message
   Signature: Signature
   CID: dict
+
+@dataclass
+class DiscoverResponse:
+  info: dict
+  methods: List[any]
+  openrpc: str
+
+@dataclass
+class VersionResponse:
+  Version: str
+  APIVersion: str
+  BlockDelay: int
