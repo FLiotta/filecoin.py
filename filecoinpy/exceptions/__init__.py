@@ -9,3 +9,6 @@ class InvalidLength(BaseException):
 
 class InvalidProtocol(BaseException):
   pass
+
+class RPCError(BaseException):
+  pass
