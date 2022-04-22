@@ -1,6 +1,6 @@
 # filecoin.py
 
-Python package with some utils to sign a filecoin message; for a fully working implementation check the `/examples` folder.
+Python package with some rpc commands and utils to sign a filecoin message; for a fully working implementation check the `/examples` folder.
 
 ## How to sign a message
 ```py
