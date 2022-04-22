@@ -27,6 +27,24 @@ msg: Message = {
 signed_message: SignedMessage = offline_sign_message(msg, address_xprv)
 ```
 
+## How to use RPC
+```py
+from filecoinpy.rpc import FilecoinLotusRPC
+
+provider = "..."
+token = "..."
+
+client = FilecoinLotusRPC(provider, token)
+
+address = client.wallet.wallet_new("secp256k1")
+
+address_balance = client.wallet.wallet_balance(address)
+address_nonce = client.mpool.mpool_get_nonce(address)
+
+version = client.miscellaneous.version()
+
+# ...
+```
 ## Tests
 ```sh
 $ python -m pytest
